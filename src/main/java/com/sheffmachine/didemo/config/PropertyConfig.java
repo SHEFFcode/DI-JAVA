@@ -9,7 +9,6 @@ import org.springframework.context.annotation.PropertySource;
 import org.springframework.context.support.PropertySourcesPlaceholderConfigurer;
 
 @Configuration
-@PropertySource({"classpath:datasource.properties", "classpath:jms.properties"})
 public class PropertyConfig {
     @Value("${sheff.username}")
     String user;
