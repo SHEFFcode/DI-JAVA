@@ -5,6 +5,7 @@ import com.sheffmachine.didemo.controllers.MyController;
 import com.sheffmachine.didemo.controllers.PropertyInjectedController;
 import com.sheffmachine.didemo.controllers.SetterInjectedController;
 import com.sheffmachine.didemo.examplebeans.FakeDataSource;
+import com.sheffmachine.didemo.examplebeans.FakeJmsDataService;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
@@ -19,6 +20,9 @@ public class DiDemoApplication {
 
         FakeDataSource fakeDataSource = (FakeDataSource) ctx.getBean(FakeDataSource.class);
         System.out.println(fakeDataSource.getUser());
+
+        FakeJmsDataService fakeJmsDataService = (FakeJmsDataService) ctx.getBean(FakeJmsDataService.class);
+        System.out.println(fakeJmsDataService.getJmsUser());
 //        System.out.println(controller.hello());
 //        System.out.println(ctx.getBean(PropertyInjectedController.class).sayHello());
 //        System.out.println(ctx.getBean(SetterInjectedController.class).sayHello());
