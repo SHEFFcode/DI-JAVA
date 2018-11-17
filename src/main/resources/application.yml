@@ -1,0 +1,12 @@
+sheff:
+  jms:
+    username: JMS Username
+    password: somepass
+    url: adsasdasdaaadsa
+
+---
+spring:
+  profiles: de
+sheff:
+  jms:
+    username: JMS Username *** IN GERMAN ***
